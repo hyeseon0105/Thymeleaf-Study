@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -97,6 +98,17 @@ public class ThymeleafController {
         return "/basic/for_opr";
     }
 
+    @GetMapping("/ive")
+    public String details(
+            @RequestParam("name")String name,
+            @RequestParam("age")int age,
+            @RequestParam("addr")String addr,
+            Model model) {
+        model.addAttribute("selectUser",
+                UserData.fromParams(name, age, addr));
+        return "/basic/detail";
+    }
+
     private void addUser(Model model) {
         List<UserData> userList = new ArrayList<>(
                 Arrays.asList(
@@ -108,8 +120,7 @@ public class ThymeleafController {
                         new UserData("레이", 22, "울산")
                 )
         );
-        model.addAttribute(userList);
+        model.addAttribute("userList",userList);
         System.out.println(userList);
-
     }
 }
