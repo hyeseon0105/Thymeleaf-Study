@@ -6,5 +6,4 @@ import lombok.Data;
 public class Animal {
     private String name;
     private String sound;
-
 }

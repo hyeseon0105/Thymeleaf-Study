@@ -12,47 +12,36 @@ public class UserData {
     private int userAge;
     private String userAddress;
 
+//    public UserData(String userName, int userAge) {
+//        this.userName = userName;
+//        this.userAge = userAge;
+//    }
 
-
-    //getter,setter,tostring
-//    기본생성장,전체생성자,일부생성자
-
+    //    getter, setter, toString
+//    기본 생성자, 전체 생성자, 일부생성자
 //    @AllArgsConstructor
-//
 //    public UserData(String userName, int userAge, String userAddress) {
 //        this.userName = userName;
 //        this.userAge = userAge;
 //        this.userAddress = userAddress;
 //    }
-
 //    @NoArgsConstructor
-//
 //    public UserData() {
 //    }
-
 //    @RequiredArgsConstructor
-
-
-//    @Getter
-//
-//    public String getUserName() {
-//        return userName;
+//    public UserData(String userName) {
+//        this.userName = userName;
 //    }
-//
-//    public int getUserAge() {
-//        return userAge;
+//    public UserData(String userName, int userAge) {
+//        this.userName = userName;
+//        this.userAge = userAge;
 //    }
-//
-//    public String getUserAddress() {
-//        return userAddress;
-//    }
-
 //    @AllArgsConstructor
 //    @NoArgsConstructor
 //    @RequiredArgsConstructor
-//    @Setter
 //    @Getter
-//    @Data
+//    @Setter
+//    @Data= getter, setter, reqargcon, tostr, equ.....
 //    @ToString
 //    @EqualsAndHashCode
 }
